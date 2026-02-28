@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Antler Zone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* App color tokens from Style/AppStyle.swift */
+      --black: #000000;
+      --grey-00: #1d1c1b;
+      --grey-10: #2e2d2c;
+      --grey-20: #3e3d3c;
+      --grey-30: #5b5b5a;
+      --grey-40: #81807e;
+      --grey-50: #a5a4a2;
+      --grey-80: #c6c6c4;
+      --danger: #ae0a0a;
+      --danger-bg: #4f1617;
+      --danger-bg-dark: #260202;
+      --primary: #b5c8a6;
+      --primary-bg: #363935;
+      --secondary: #7f8cff;
+      --secondary-bg: #2c3159;
+      --white: #ffffff;
+      --grid-line: rgba(255, 255, 255, 0.2);
+
+      --app-bg: var(--black);
+      --app-text: var(--primary);
+      --app-muted: var(--grey-40);
+      --app-border: var(--grey-30);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: "Barlow Condensed", sans-serif;
+      background-color: var(--app-bg);
+      color: var(--app-text);
+      text-transform: uppercase;
+      background-image:
+        repeating-linear-gradient(
+          to right,
+          transparent 0 39px,
+          var(--grid-line) 39px 40px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          transparent 0 39px,
+          var(--grid-line) 39px 40px
+        );
+    }
+
+    main {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .frame {
+      width: min(960px, 100%);
+      padding: clamp(20px, 4vw, 56px);
+      display: grid;
+      gap: 24px;
+    }
+
+    .logo {
+      width: 100%;
+      height: auto;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(44px, 13vw, 148px);
+      line-height: 0.9;
+      letter-spacing: 0.03em;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    p, h1.p {
+      margin: 0 0 0.5rem 0;
+      font-size: clamp(20px, 2.2vw, 34px);
+      line-height: 1.08;
+      font-weight: 200;
+      color: var(--white);
+    }
+
+    .accent {
+      color: var(--secondary) !important;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="frame">
+      <img class="logo" src="./logo.png" alt="Antler Zone logo">
+      
+      <div>
+        <p><span class="accent">DAF-100</span> is a synthesizer, sequencer, drum machine, noise maker, instrument toy for iphone.</p>
+        <p>You will have to figure it out.</p>
+        <p>But if you need help, email nofrillstoronto (AT) gmail (DOT) com</p>
+        <p>Thank you</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
