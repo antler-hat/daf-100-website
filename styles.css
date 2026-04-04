@@ -1,0 +1,123 @@
+:root {
+  /* App color tokens from Style/AppStyle.swift */
+  --black: #000000;
+  --grey-00: #1d1c1b;
+  --grey-10: #2e2d2c;
+  --grey-20: #3e3d3c;
+  --grey-30: #5b5b5a;
+  --grey-40: #81807e;
+  --grey-50: #a5a4a2;
+  --grey-80: #c6c6c4;
+  --danger: #ae0a0a;
+  --danger-bg: #4f1617;
+  --danger-bg-dark: #260202;
+  --primary: #b5c8a6;
+  --primary-bg: #363935;
+  --secondary: #7f8cff;
+  --secondary-bg: #2c3159;
+  --white: #ffffff;
+  --grid-line: rgba(255, 255, 255, 0.2);
+
+  --app-bg: var(--black);
+  --app-text: var(--primary);
+  --app-muted: var(--grey-40);
+  --app-border: var(--grey-30);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  background-color: var(--app-bg);
+  color: var(--app-text);
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      transparent 0 39px,
+      var(--grid-line) 39px 40px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 39px,
+      var(--grid-line) 39px 40px
+    );
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.frame {
+  width: min(960px, 100%);
+  padding: clamp(20px, 4vw, 56px);
+  display: grid;
+  gap: 24px;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.policy h1 {
+  margin: 0;
+  font-size: clamp(44px, 13vw, 148px);
+  line-height: 0.9;
+  letter-spacing: 0.03em;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--app-text);
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(20px, 2.2vw, 34px);
+  line-height: 1.4;
+  font-weight: 200;
+  color: var(--white);
+}
+
+a {
+  color: var(--secondary);
+}
+
+.accent {
+  color: var(--secondary) !important;
+}
+
+.policy h1 {
+  font-size: clamp(36px, 8vw, 80px);
+  line-height: 0.95;
+}
+
+.policy p {
+  font-size: 1rem;
+}
+
+.policy section {
+  display: grid;
+  gap: 4px;
+}
