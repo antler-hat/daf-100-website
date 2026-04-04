@@ -1,3 +1,6 @@
+/* -------------------------------------------------- */
+/* Theme Tokens                                       */
+/* -------------------------------------------------- */
 :root {
   /* App color tokens from Style/AppStyle.swift */
   --black: #000000;
@@ -16,7 +19,7 @@
   --secondary: #7f8cff;
   --secondary-bg: #2c3159;
   --white: #ffffff;
-  --grid-line: rgba(255, 255, 255, 0.2);
+  --grid-line: rgba(255, 255, 255, 0.15);
 
   --app-bg: var(--black);
   --app-text: var(--primary);
@@ -24,6 +27,9 @@
   --app-border: var(--grey-30);
 }
 
+/* -------------------------------------------------- */
+/* Base / Reset                                       */
+/* -------------------------------------------------- */
 * {
   box-sizing: border-box;
 }
@@ -34,8 +40,11 @@ body {
   min-height: 100%;
 }
 
+/* -------------------------------------------------- */
+/* App Shell                                          */
+/* -------------------------------------------------- */
 body {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Barlow", sans-serif;
   background-color: var(--app-bg);
   color: var(--app-text);
   background-image:
@@ -58,43 +67,43 @@ main {
   padding: 24px;
 }
 
-.frame {
-  width: min(960px, 100%);
-  padding: clamp(20px, 4vw, 56px);
-  display: grid;
-  gap: 24px;
-}
-
+/* -------------------------------------------------- */
+/* Media                                              */
+/* -------------------------------------------------- */
 .logo {
   width: 100%;
   height: auto;
 }
 
-.uppercase {
-  text-transform: uppercase;
+.logo-sm {
+  width: 60px;
+  height: auto;
 }
 
-.policy h1 {
+/* -------------------------------------------------- */
+/* Typography                                         */
+/* -------------------------------------------------- */
+h1 {
   margin: 0;
-  font-size: clamp(44px, 13vw, 148px);
-  line-height: 0.9;
-  letter-spacing: 0.03em;
-  font-weight: 200;
+  font-size: 1.25rem;
+  line-height: 1.1;
+  font-weight: 600;
   text-transform: uppercase;
+  padding: 0;
 }
 
 h2 {
   margin: 0 0 0.5rem 0;
-  font-size: 1.5rem;
-  line-height: 1;
-  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 600;
   color: var(--app-text);
   text-transform: uppercase;
 }
 
 p {
   margin: 0 0 0.5rem 0;
-  font-size: clamp(20px, 2.2vw, 34px);
+  font-size: 1rem;
   line-height: 1.4;
   font-weight: 200;
   color: var(--white);
@@ -105,19 +114,28 @@ a {
 }
 
 .accent {
-  color: var(--secondary) !important;
+  color: var(--primary) !important;
 }
 
-.policy h1 {
-  font-size: clamp(36px, 8vw, 80px);
-  line-height: 0.95;
+/* -------------------------------------------------- */
+/* Utilities                                          */
+/* -------------------------------------------------- */
+.uppercase {
+  text-transform: uppercase;
 }
 
-.policy p {
-  font-size: 1rem;
+.text-sm {
+  font-size: 0.75rem;
 }
 
-.policy section {
-  display: grid;
-  gap: 4px;
+.text-400 {
+  font-weight: 400;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.m-b-md {
+  margin-bottom: 1rem;
 }
