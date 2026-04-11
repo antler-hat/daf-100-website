@@ -115,6 +115,7 @@ a {
 
 .accent {
   color: var(--primary) !important;
+  font-weight: bold;
 }
 
 /* -------------------------------------------------- */
